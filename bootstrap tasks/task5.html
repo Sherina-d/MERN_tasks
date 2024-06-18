@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-5</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #8e44ad, #3498db);
+        color: #ecf0f1;
+        font-family: "Arial", sans-serif;
+      }
+
+      .transparent-box {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 25px;
+        width: 600px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+
+      .transparent-box:hover {
+        transform: scale(1.02);
+      }
+
+      .input-group-text {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+        color: white;
+        border-radius: 10px 0 0 10px;
+      }
+
+      .form-control,
+      .form-select {
+        background-color: #34495e;
+        border: none;
+        color: #ecf0f1;
+        border-radius: 0 10px 10px 0;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+      }
+
+      .btn-warning {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+        color: #ecf0f1;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-warning:hover {
+        background-color: #c0392b;
+        border-color: #c0392b;
+        transform: scale(1.05);
+      }
+
+      .form-check-input:checked {
+        background-color: #e74c3c;
+        border-color: #e74c3c;
+      }
+
+      .invalid-feedback {
+        color: #e74c3c;
+      }
+
+      .lbl {
+        font-weight: bold;
+        color: #ecf0f1;
+      }
+
+      .input-group-text i,
+      .btn-warning i {
+        animation: icon-bounce 1s infinite alternate;
+      }
+
+      @keyframes icon-bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="transparent-box">
+      <form class="frm needs-validation" novalidate>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">First Name</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">
+                Please enter a valid First Name!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">Last Name</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </div>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">
+                Please enter a valid Last Name!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">Email</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <input type="email" class="form-control" required />
+              <div class="invalid-feedback">Please enter a valid Email!</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">Phone #</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">
+                Please enter a valid Phone Number!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">Address</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </div>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">Please enter a valid Address!</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">City</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-home" aria-hidden="true"></i>
+              </div>
+              <input type="text" class="form-control" required />
+              <div class="invalid-feedback">Please enter a valid City!</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3 lbl d-flex justify-content-end">State</div>
+          <div class="col-9">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-list" aria-hidden="true"></i>
+              </div>
+              <select class="form-select cust-width" required>
+                <option value="">Please select your State</option>
+                <option value="1">Andhra Pradesh</option>
+                <option value="2">Tamilnadu</option>
+                <option value="3">Delhi</option>
+              </select>
+              <div class="invalid-feedback">Please select a valid State!</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-5">Do you have hosting?</div>
+          <div class="col-7">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios1"
+                value="option1"
+                required
+              />
+              <label class="form-check-label" for="exampleRadios1"> Yes </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="exampleRadios"
+                id="exampleRadios2"
+                value="option2"
+                required
+              />
+              <label class="form-check-label" for="exampleRadios2"> No </label>
+              <div class="invalid-feedback">Please select an option.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4 lbl d-flex justify-content-end">
+            Project Description
+          </div>
+          <div class="col-8">
+            <div class="input-group">
+              <div class="input-group-text">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </div>
+              <textarea class="form-control" required></textarea>
+              <div class="invalid-feedback">
+                Please enter a valid Description!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-warning">
+            Send <i class="fa fa-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      (() => {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
