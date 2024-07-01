@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+        .button-group button {
+            font-size: 15px;
+            border-radius: 3px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplication and Division</h1>
+    <div class="input-group">
+        <input type="number" id="number1" placeholder="Enter first number">
+        <input type="number" id="number2" placeholder="Enter second number">
+    </div>
+    <div class="button-group">
+        <button onclick="calculate('multiply')">Multiply</button>
+        <button onclick="calculate('divide')">Divide</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById('number1').value);
+            let num2 = parseFloat(document.getElementById('number2').value);
+            let result = 0;
+            if (operation === 'multiply') {
+                result = num1 * num2;
+                document.getElementById('result').innerText = 'Result: ' + result;
+            } else if (operation === 'divide') {
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                    document.getElementById('result').innerText = 'Result: ' + result;
+                } else {
+                    document.getElementById('result').innerText = 'Error: Division by zero';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

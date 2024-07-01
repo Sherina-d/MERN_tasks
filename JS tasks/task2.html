@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+    <style>
+        body {
+           
+            text-align: center;
+            background-color: #8eaec9;
+            color: #333;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #031224;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sort Letters in Alphabetical Order</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string">
+    <button onclick="sortLetters()">Sort</button>
+    <div id="result"></div>
+
+    <script>
+        function sortLetters() {
+            let str = document.getElementById('stringInput').value;
+            let sortedStr = str.split('').sort().join('');
+            document.getElementById('result').innerText = 'Sorted String: ' + sortedStr;
+        }
+    </script>
+</body>
+</html>

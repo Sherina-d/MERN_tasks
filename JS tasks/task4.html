@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f8ff;
+        color: #333;
+      }
+      #datetimeDisplay {
+        margin-top: 20px;
+        font-size: 20px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Date and Time Display</h1>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="showTime()">Show Time</button>
+    <div id="datetimeDisplay"></div>
+
+    <script>
+      function showDate() {
+        let currentDate = new Date().toLocaleDateString();
+        document.getElementById("datetimeDisplay").innerText =
+          "Current Date: " + currentDate;
+      }
+
+      function showTime() {
+        let currentTime = new Date().toLocaleTimeString();
+        document.getElementById("datetimeDisplay").innerText =
+          "Current Time: " + currentTime;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-1</title>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse Number</h1>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <button onclick="reverseNumber()">Reverse</button>
+    <div id="result"></div>
+
+    <script>
+        function reverseNumber() {
+            let number = document.getElementById('numberInput').value;
+            let reversedNumber = number.split('').reverse().join('');
+            document.getElementById('result').innerText = 'Reversed Number: ' + reversedNumber;
+        }
+    </script>
+</body>
+</html>
